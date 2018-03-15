@@ -4,7 +4,7 @@ public class SolveTowers {
 
 	public static void main(String[] args) {
 		long startTid = System.nanoTime();
-		TowersOfHanoi towers = new TowersOfHanoi(10);
+		TowersOfHanoi towers = new TowersOfHanoi(15);
 		towers.solve();
 		System.out.println("Antall flyttinger: " + towers.flyttinger);
 		long slutttid = System.nanoTime();
