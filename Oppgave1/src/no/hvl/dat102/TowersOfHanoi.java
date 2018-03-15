@@ -29,7 +29,7 @@ public class TowersOfHanoi {
 	}
 
 	private void moveOneDisk(int start, int end) {
-		// System.out.println("Move one disk from " + start + " to " + end);
+		//System.out.println("Move one disk from " + start + " to " + end);
 		flyttinger++;
 	}
 }
