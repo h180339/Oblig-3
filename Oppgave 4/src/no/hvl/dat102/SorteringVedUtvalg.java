@@ -1,24 +1,19 @@
 package no.hvl.dat102;
 
 public class SorteringVedUtvalg {
-	public static <T extends Comparable<T>> void utvalgsSortering(T[] tab) {
-		int min;
+	public static <T extends Comparable<T>> void selectionSort(T[] list) {
+		for (int i = 0; i < list.length - 1; i++) {
+			int iSmallest = i;
 
-		for (int index = 0; index < tab.length - 1; index++) {
-			min = index;
-			for (int scan = index - 1; scan < tab.length; scan++) {
-				if (tab[scan].compareTo(tab[min]) < 0) {
-					min = scan;
-
-					bytterOm(tab, min, index);
+			for (int j = i + 1; j < list.length; j++) {
+				if (list[iSmallest].compareTo((list[j])) > 0) {
+					iSmallest = j;
 				}
 			}
-		}
-	}
+			T iSwap = list[iSmallest];
+			list[iSmallest] = list[i];
+			list[i] = iSwap;
 
-	private static <T extends Comparable<T>> void bytterOm(T[] tab, int index1, int index2) {
-		T temp = tab[index1];
-		tab[index1] = tab[index2];
-		tab[index2] = temp;
+		}
 	}
 }
