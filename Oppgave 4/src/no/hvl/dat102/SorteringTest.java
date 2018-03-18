@@ -24,27 +24,22 @@ public class SorteringTest {
 		System.out.println("Listen før fletting" + "\n" + Arrays.toString(tabell));
 		long Starttid = System.nanoTime();
 		//flettesortering test	
-		//Flettesortering mergesort = new Flettesortering();
-		//mergesort.mergeSort(tabell);
+		//Flettesortering.mergeSort(tabell);
 		
 		//boblesortering test
-		//Boblesortering boblesort = new Boblesortering();
-		//boblesort.bubbleSort(tabell);
+		//Boblesortering.bubbleSort(tabell);
 		
 		//QuickSort Test
-		//QuickSort Qsort = new QuickSort();
-		//Qsort.quickSort(tabell);
+		//QuickSort.quickSort(tabell);
 		
 		//sortering ved innsetting Test
-		//SorteringVedInnsetting SortVinn = new SorteringVedInnsetting();
-		//SortVinn.innsettingSort(tabell);
+		//SorteringVedInnsetting.innsettingSort(tabell);
 		
 		// sortering ved utvalg
-		//SorteringVedUtvalg utvalg = new SorteringVedUtvalg();
-		//utvalg.selectionSort(tabell);
+		//SorteringVedUtvalg.selectionSort(tabell);
 		
 		//flettesortering test
-		Flettesortering.mergeSort(tabell);
+		//Flettesortering.mergeSort(tabell);
 		long sluttid = System.nanoTime();
 		
 		System.out.println("Listen etter fletting" + "\n" + Arrays.toString(tabell));
