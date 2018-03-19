@@ -38,8 +38,7 @@ public class SorteringTest {
 		// sortering ved utvalg
 		//SorteringVedUtvalg.selectionSort(tabell);
 		
-		//flettesortering test
-		//Flettesortering.mergeSort(tabell);
+		
 		long sluttid = System.nanoTime();
 		
 		System.out.println("Listen etter fletting" + "\n" + Arrays.toString(tabell));

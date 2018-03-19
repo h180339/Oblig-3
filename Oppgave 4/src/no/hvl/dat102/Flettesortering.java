@@ -37,7 +37,7 @@ public class Flettesortering {
 		}
 
 		while (secondHalfIndex < secondHalf.length) {
-			list[listIndex++] = firsthalf[secondHalfIndex++];
+			list[listIndex++] = secondHalf[secondHalfIndex++];
 		}
 		return list;
 	}
