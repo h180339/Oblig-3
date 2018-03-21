@@ -7,7 +7,7 @@ public class RadixSortering {
 	public static void main(String[] args) {
 		long startTid = System.nanoTime();
 		for(int j = 0; j<10; j++) {
-		Integer [] tabell = SorteringTest.listeGenerator(100);
+		Integer [] tabell = SorteringTest.listeGenerator(128000);
 		final int RADIX = 10;
 		ArrayList<Integer> bøtteTabell[] = new ArrayList[RADIX];
 		for (int teller = 0; teller < bøtteTabell.length; teller++) {
