@@ -1,10 +1,8 @@
 package no.hvl.dat102;
 
-import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
-public class SorteringTest {
+public class KlientKvikksort {
 
 	public static Integer[] listeGenerator(int størrelse) {
 		Integer[] Tabell = new Integer[størrelse];
@@ -20,24 +18,12 @@ public class SorteringTest {
 		long totaltid = 0;
 		long Starttid = System.nanoTime();
 		for(int i = 0; i < 10; i++) {
-			Integer[] tabell = listeGenerator(128000);
+			Integer[] tabell = listeGenerator(32000);
 			// System.out.println("Listen før fletting" + "\n" + Arrays.toString(tabell));
 
-			// flettesortering test
-			//Flettesortering.mergeSort(tabell);
-
-			// boblesortering test
-			//Boblesortering.bubbleSort(tabell);
-
-			// QuickSort Test
-			QuickSort.quickSort(tabell);
 
 			// sortering ved innsetting Test
-			//SorteringVedInnsetting.innsettingSort(tabell);
-
-			// sortering ved utvalg
-			// SorteringVedUtvalg.selectionSort(tabell);
-
+			SoekingOgSortering.kvikkSortNy(tabell, 0 , tabell.length -1);
 
 
 		}
@@ -48,5 +34,6 @@ public class SorteringTest {
 		// System.out.println("Kjøringen tok " + (sluttid - Starttid) + " ns");
 
 	}
+
 
 }
