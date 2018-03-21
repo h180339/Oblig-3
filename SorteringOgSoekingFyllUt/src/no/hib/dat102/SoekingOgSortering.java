@@ -1,22 +1,22 @@
-package no.hib.dat102;
+ package no.hib.dat102;
 
 public class SoekingOgSortering {
 
 	/*************************************************************************************************/
-	// Søkealgoritmer
+	// Sï¿½kealgoritmer
 	/*************************************************************************************************/
 
 	/**
-	 * Metoden gjør et lineært søk i en tabell av usorterte data
+	 * Metoden gjï¿½r et lineï¿½rt sï¿½k i en tabell av usorterte data
 	 * 
 	 * @param data
-	 *            er data som skal søkes i
+	 *            er data som skal sï¿½kes i
 	 * @param min
 	 *            er startindeks
 	 * @param maks
 	 *            er sluttindeks
 	 * @param el
-	 *            er verdien vi søker etter
+	 *            er verdien vi sï¿½ker etter
 	 * @return sann om elementet ble funnet ellers usann
 	 */
 	public static <T extends Comparable<T>> boolean linearSoekU(T[] data, int min, int maks, T el) {
@@ -32,16 +32,16 @@ public class SoekingOgSortering {
 	}// metode
 
 	/**
-	 * Metoden gjør et lineært søk i en sortert tabell av data
+	 * Metoden gjï¿½r et lineï¿½rt sï¿½k i en sortert tabell av data
 	 * 
 	 * @param data
-	 *            er data som skal søkes i
+	 *            er data som skal sï¿½kes i
 	 * @param min
 	 *            er startindeks
 	 * @param maks
 	 *            er sluttindeks
 	 * @param el
-	 *            verdien vi søker etter
+	 *            verdien vi sï¿½ker etter
 	 * @return sann hvis funnet ellers usann
 	 */
 	public static <T extends Comparable<T>> boolean linearSoekS(T[] data, int min, int maks, T el) {
@@ -61,16 +61,16 @@ public class SoekingOgSortering {
 	}// metode
 
 	/**
-	 * Metoden gjør et binært søk i en *sortert* tabell av data
+	 * Metoden gjï¿½r et binï¿½rt sï¿½k i en *sortert* tabell av data
 	 * 
 	 * @param data
-	 *            er data som skal søkes i
+	 *            er data som skal sï¿½kes i
 	 * @param min
 	 *            er startindeks
 	 * @param maks
 	 *            er sluttindeks
 	 * @param el
-	 *            er elementet vi søker etter
+	 *            er elementet vi sï¿½ker etter
 	 * @return sann om elementet ble funnet ellers usann.
 	 */
 
@@ -111,10 +111,10 @@ public class SoekingOgSortering {
 
 	}
 
-	/* Rekursiv binærsøk som returnerer indeks */
+	/* Rekursiv binï¿½rsï¿½k som returnerer indeks */
 	// Alt 3
 	public static <T extends Comparable<T>> int binaerSoek3(T[] data, int min, int maks, T el) {
-		// Returnerer indeksen til målelementet hvis det fins ellers -1
+		// Returnerer indeksen til mï¿½lelementet hvis det fins ellers -1
 		if (min > maks) { // basistilfelle, ingen element
 			return -1;
 		}
@@ -124,19 +124,19 @@ public class SoekingOgSortering {
 		if (resultat == 0) { // basistilfelle, finner elementet
 			return midtpunkt;
 		}
-		if (resultat < 0) {// ( vil her også fungere med else if)
+		if (resultat < 0) {// ( vil her ogsï¿½ fungere med else if)
 			return binaerSoek3(data, min, midtpunkt - 1, el);
 		} else { // resultat > 0
 			return binaerSoek3(data, midtpunkt + 1, maks, el);
 		}
 	}// metode
 
-	/* Ikke rekursiv binærsøk som returnerer indeks */
+	/* Ikke rekursiv binï¿½rsï¿½k som returnerer indeks */
 	// Alt 4
 	public static <T extends Comparable<T>> int binaerSoek4(T[] data, int min, int maks, T el) {
 		return maks;
-		// Returnerer indeksen til målelementet hvis det fins ellers -1
-		// Fyll ut og kjør metoden
+		// Returnerer indeksen til mï¿½lelementet hvis det fins ellers -1
+		// Fyll ut og kjï¿½r metoden
 	}//
 
 	/*************************************************************************************************/
@@ -158,13 +158,13 @@ public class SoekingOgSortering {
 				if (data[sok].compareTo(data[minste]) < 0) {
 					minste = sok;
 				}
-			} // indre for-løkke
+			} // indre for-lï¿½kke
 
 			/** Bytt verdiene */
 			temp = data[minste];
 			data[minste] = data[neste];
 			data[neste] = temp;
-		} // ytre for-løkke
+		} // ytre for-lï¿½kke
 	}// metode
 
 	/**
