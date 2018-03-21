@@ -1,6 +1,10 @@
 <component name="InspectionProjectProfileManager">
   <settings>
+<<<<<<< HEAD
     <option name="PROJECT_PROFILE" value="VInspect" />
+=======
+    <option name="PROJECT_PROFILE" value="FabricInspect" />
+>>>>>>> 72f058bd35c695e71f46676e36764303fd5105cb
     <option name="USE_PROJECT_PROFILE" value="false" />
   </settings>
 </component>
