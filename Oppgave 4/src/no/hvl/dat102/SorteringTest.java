@@ -20,7 +20,7 @@ public class SorteringTest {
 		long totaltid = 0;
 		long Starttid = System.nanoTime();
 		for(int i = 0; i < 10; i++) {
-			Integer[] tabell = listeGenerator(128000);
+			Integer[] tabell = listeGenerator(100);
 			// System.out.println("Listen før fletting" + "\n" + Arrays.toString(tabell));
 
 			// flettesortering test
