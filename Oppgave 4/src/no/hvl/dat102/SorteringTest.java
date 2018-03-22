@@ -19,18 +19,19 @@ public class SorteringTest {
 	public static void main(String[] args) {
 		long totaltid = 0;
 		long Starttid = System.nanoTime();
-		for(int i = 0; i < 10; i++) {
-			Integer[] tabell = listeGenerator(100);
+		for(int i = 0; i < 100; i++) {
+			Integer[] tabell = listeGenerator(128000);
 			// System.out.println("Listen før fletting" + "\n" + Arrays.toString(tabell));
 
 			// flettesortering test
-			//Flettesortering.mergeSort(tabell);
+
+			Flettesortering.mergeSort(tabell);
 
 			// boblesortering test
 			//Boblesortering.bubbleSort(tabell);
 
 			// QuickSort Test
-			QuickSort.quickSort(tabell);
+			//QuickSort.quickSort(tabell);
 
 			// sortering ved innsetting Test
 			//SorteringVedInnsetting.innsettingSort(tabell);
@@ -42,7 +43,7 @@ public class SorteringTest {
 
 		}
 		long sluttid = System.nanoTime();
-		System.out.println("gjennomsintlig kjøretid = " + (sluttid - Starttid) / 10 + " ns");
+		System.out.println("gjennomsintlig kjøretid = " + (sluttid - Starttid) / 100 + " ns");
 		// System.out.println("Listen etter fletting" + "\n" + Arrays.toString(tabell));
 
 		// System.out.println("Kjøringen tok " + (sluttid - Starttid) + " ns");
